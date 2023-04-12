@@ -1,14 +1,20 @@
 import java.util.Scanner;
 
 class Fibo extends Thread{
-    public void run(){
+    int num;
+
+    Fibo(){
         Scanner obj = new Scanner(System.in);
         System.out.print("Enter the number of terms of fibonacci series (>2) = ");
-        int num = obj.nextInt();
+        num = obj.nextInt();
+    }
+
+    public void run(){
+        
         System.out.println("Fibo item 1 = "+0);
         //sleep time
         try{
-            Thread.sleep(1000);
+            Thread.sleep(500);
         }
         catch(InterruptedException e){
             System.out.println(e);
@@ -16,7 +22,7 @@ class Fibo extends Thread{
 
         System.out.println("Fibo item 2 = "+1);
         try{
-            Thread.sleep(1000);
+            Thread.sleep(500);
         }
         catch(InterruptedException e){
             System.out.println(e);
@@ -26,7 +32,7 @@ class Fibo extends Thread{
             int c=a+b;
             System.out.println("Fibo item "+i+" = "+c+" ");
             try{
-                Thread.sleep(1000);
+                Thread.sleep(500);
             }
             catch(InterruptedException e){
                 System.out.println(e);
@@ -38,10 +44,15 @@ class Fibo extends Thread{
 }
 
 class Prime extends Thread{
-    public void run(){
+    int num;
+
+    Prime(){
         Scanner obj = new Scanner(System.in);
         System.out.println("Enter number upto which prime no. to be calculated = ");
-        int num = obj.nextInt();
+        num = obj.nextInt();
+    }
+
+    public void run(){
         int term = 1;
         //sleep time
         try{
