@@ -84,5 +84,6 @@ class Main{
             int choice = Integer.parseInt(input.readLine());
             if(choice==0)   break;
         }
+        input.close();
     }
 }
