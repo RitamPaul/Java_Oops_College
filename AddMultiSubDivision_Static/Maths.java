@@ -29,11 +29,11 @@ class Maths{
 
         System.out.print("\nEnter your 1st number = ");
         String s1 = scan.nextLine();
-        if(s1!="")  num1=Float.parseFloat(s1);
+        if(!s1.equals(""))  num1=Float.parseFloat(s1);
         for(int i=1; i>0; ++i){
             System.out.print("Enter your 2nd number = ");
             String s2 = scan.nextLine();
-            if(s2!=""){
+            if(!s2.equals("")){
                 num2=Float.parseFloat(s2);
                 break;
             }
