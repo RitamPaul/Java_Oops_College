@@ -3,8 +3,8 @@ import java.util.Scanner;
 class Rectangle{
     private float length=1, breadth=1;
     Rectangle(String l, String b){
-        if(l!="")   this.length = Float.parseFloat(l);
-        if(b!="")   this.breadth = Float.parseFloat(b);
+        if(!l.equals(""))   this.length = Float.parseFloat(l);
+        if(!b.equals(""))   this.breadth = Float.parseFloat(b);
     }
     public float rectArea(){
         return length*breadth;

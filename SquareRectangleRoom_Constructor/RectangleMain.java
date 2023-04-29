@@ -3,11 +3,11 @@ import java.util.Scanner;
 class Room{
     private float length=0, breadth=0, side=0;
     Room(String l, String b){
-        if(l!="")   this.length=Float.parseFloat(l);
-        if(b!="")   this.breadth=Float.parseFloat(b);
+        if(!l.equals(""))   this.length=Float.parseFloat(l);
+        if(!b.equals(""))   this.breadth=Float.parseFloat(b);
     }
     Room(String s){
-        if(s!="")   this.side=Float.parseFloat(s);
+        if(!s.equals(""))   this.side=Float.parseFloat(s);
     }
     public void display(int i){
         System.out.println("\nRoom-" + i + " area as rectangle = " + length*breadth + " sq.units");
@@ -33,7 +33,7 @@ class RectangleMain{
         String b = scan.nextLine();
         System.out.print("Enter side of room-1 as square = ");
         String s = scan.nextLine();
-        if(s!="")   obj1 = new Room(s);
+        if(!s.equals(""))   obj1 = new Room(s);
         else    obj1 = new Room(l,b);
 
         System.out.print("\nEnter length of room-2 as rectangle = ");
@@ -42,7 +42,7 @@ class RectangleMain{
         b = scan.nextLine();
         System.out.print("Enter side of room-2 as square = ");
         s = scan.nextLine();
-        if(s!="")   obj2 = new Room(s);
+        if(!s.equals(""))   obj2 = new Room(s);
         else    obj2 = new Room(l,b);
 
         obj1.display(1);

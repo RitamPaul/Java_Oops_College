@@ -1,7 +1,4 @@
 import java.util.Scanner;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 class Complex{
     public float real, imag;
@@ -11,8 +8,8 @@ class Complex{
     }
     Complex(String r, String i){
         this();
-        if(r!="")   this.real=Float.parseFloat(r);
-        if(i!="")   this.imag=Float.parseFloat(i);
+        if(!r.equals(""))   this.real=Float.parseFloat(r);
+        if(!i.equals(""))   this.imag=Float.parseFloat(i);
     }
     Complex(Complex obj){
         this.real=obj.real;
@@ -39,8 +36,7 @@ class Complex{
 }
 
 class Main{
-    public static void main(String args[]) throws IOException{
-        //BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String args[]){
         Scanner input = new Scanner(System.in);
         Complex obj1=new Complex(), obj2=new Complex();
 

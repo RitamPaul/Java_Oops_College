@@ -54,13 +54,6 @@ class Prime extends Thread{
 
     public void run(){
         int term = 1;
-        //sleep time
-        try{
-            Thread.sleep(500);
-        }
-        catch(InterruptedException e){
-            System.out.println(e);
-        }
 
         for(int i=2; i<=num; ++i){
             if(i==2){
