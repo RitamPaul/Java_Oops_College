@@ -46,5 +46,6 @@ class Maths{
         System.out.println(num1 + " - " + num2 + " = " + Subtract.sub(num1, num2));
         System.out.println(num1 + " * " + num2 + " = " + Multiply.multi(num1, num2));
         System.out.println(num1 + " / " + num2 + " = " + Divide.div(num1, num2));
+        scan.close();
     }
 }
