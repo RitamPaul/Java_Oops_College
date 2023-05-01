@@ -47,5 +47,6 @@ class RectangleMain{
 
         obj1.display(1);
         obj2.display(2);
+        scan.close();
     }
 }
