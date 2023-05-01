@@ -30,5 +30,6 @@ class RectangleMain{
 
         System.out.println("1st rectangle's area = "+obj1.rectArea()+" sq.units");
         System.out.println("2nd rectangle's area = "+obj2.rectArea()+" sq.units");
+        scan.close();
     }
 }
