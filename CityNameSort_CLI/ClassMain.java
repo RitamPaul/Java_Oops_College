@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 class ClassMain{
     public static void main(String args[]){
         int n = args.length;
@@ -11,8 +9,6 @@ class ClassMain{
                         args[j+1] = args[j].substring(0, (args[j].length() - args[j+1].length()));
                         args[j] = args[j].substring(args[j+1].length(), args[j].length());
                     }
-                    else
-                        break;
                 }
             }
         }
