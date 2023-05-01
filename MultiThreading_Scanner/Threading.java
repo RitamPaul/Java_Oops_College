@@ -7,12 +7,10 @@ class Fibo extends Thread{
         Scanner obj = new Scanner(System.in);
         System.out.print("Enter the number of terms of fibonacci series (>2) = ");
         num = obj.nextInt();
-        obj.close();
+        obj.nextLine();
     }
 
     public void run(){
-        
-        System.out.println("Fibo item 1 = "+0);
         //sleep time
         try{
             Thread.sleep(500);
@@ -20,24 +18,26 @@ class Fibo extends Thread{
         catch(InterruptedException e){
             System.out.println(e);
         }
+        System.out.println("Fibo item 1 = "+0);        
 
-        System.out.println("Fibo item 2 = "+1);
         try{
             Thread.sleep(500);
         }
         catch(InterruptedException e){
             System.out.println(e);
         }
+        System.out.println("Fibo item 2 = "+1);
+        
         int a=0, b=1;
         for(int i=3; i<=num; ++i){
-            int c=a+b;
-            System.out.println("Fibo item "+i+" = "+c+" ");
             try{
                 Thread.sleep(500);
             }
             catch(InterruptedException e){
                 System.out.println(e);
             }
+            int c=a+b;
+            System.out.println("Fibo item "+i+" = "+c+" ");
             a = b;
             b = c;
         }
@@ -49,15 +49,23 @@ class Prime extends Thread{
 
     Prime(){
         Scanner obj = new Scanner(System.in);
-        System.out.println("Enter number upto which prime no. to be calculated = ");
+        System.out.print("Enter number upto which prime no. to be calculated = ");
         num = obj.nextInt();
-        obj.close();
+        obj.nextLine();
     }
 
     public void run(){
         int term = 1;
 
         for(int i=2; i<=num; ++i){
+            //sleep time
+            try{
+                Thread.sleep(500);
+            }
+            catch(InterruptedException e){
+                System.out.println(e);
+            }
+            
             if(i==2){
                 System.out.println("Prime term "+term+" = "+2+" ");
                 term++;
@@ -74,13 +82,6 @@ class Prime extends Thread{
                     System.out.println("Prime term "+term+" = "+i+" ");
                     term++;
                 }
-            }
-            //sleep time
-            try{
-                Thread.sleep(500);
-            }
-            catch(InterruptedException e){
-                System.out.println(e);
             }
         }
     }
