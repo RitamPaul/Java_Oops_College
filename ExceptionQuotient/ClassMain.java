@@ -13,7 +13,7 @@ class ClassMain{
         try{
             quotient = dividend / divisor;
             if(quotient==Float.POSITIVE_INFINITY || quotient==Float.NEGATIVE_INFINITY)
-                throw new Exception("Divided by 0");
+                throw new Exception("Exception occured");
         }
         catch(Exception e){
             System.out.println(e);
