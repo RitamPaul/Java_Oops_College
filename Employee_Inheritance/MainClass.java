@@ -5,16 +5,19 @@ import java.io.InputStreamReader;
 class Employee{
     public String em_code="", em_name="", location="", mobile="";
     public double da=0, hra=0;
+    Employee(String m_c, String m_name, String loc, String mob){
+        this.em_code = m_c;
+        this.em_name = m_name;
+        this.location = loc;
+        this.mobile = mob;
+    }
 }
 
 class Teaching extends Employee{
     private String sub_sp="", desig="";
     private double b_pay=70000;
     Teaching(String m_c, String m_name, String loc, String mob, String s_sp, String des){
-        em_code = m_c;
-        em_name = m_name;
-        location = loc;
-        mobile = mob;
+        super(m_c, m_name, loc, mob);
         sub_sp = s_sp;
         desig = des;
     }
@@ -29,10 +32,7 @@ class Office extends Employee{
     private String desig;
     private double b_pay=35000;
     Office(String m_c, String m_name, String loc, String mob, String des){
-        em_code = m_c;
-        em_name = m_name;
-        location = loc;
-        mobile = mob;
+        super(m_c, m_name, loc, mob);
         desig = des;
     }
     public void salary(){
@@ -42,7 +42,7 @@ class Office extends Employee{
     }
 }
 
-class Main{
+class ClassMain{
     public static void main(String args[]) throws IOException{
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         while(true){
