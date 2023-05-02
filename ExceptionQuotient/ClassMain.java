@@ -21,7 +21,7 @@ class ClassMain{
         }
         finally{
             if(quotient==-1)
-                System.out.println("Exception: quotient = -1");
+                System.out.println("Exception occured");
             else if(count==0)
                 System.out.println(dividend+" / "+divisor+" = "+quotient);
         }
