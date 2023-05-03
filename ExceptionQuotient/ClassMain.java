@@ -14,15 +14,15 @@ class ClassMain{
             quotient = dividend / divisor;
             if(quotient==Float.POSITIVE_INFINITY || quotient==Float.NEGATIVE_INFINITY)
                 throw new Exception("Exception occured");
+            else if(quotient==-1)
+                throw new Exception("Exception occured");
         }
         catch(Exception e){
             System.out.println(e);
             count++;
         }
         finally{
-            if(quotient==-1)
-                System.out.println("Exception occured");
-            else if(count==0)
+            if(count==0)
                 System.out.println(dividend+" / "+divisor+" = "+quotient);
         }
         scan.close();
