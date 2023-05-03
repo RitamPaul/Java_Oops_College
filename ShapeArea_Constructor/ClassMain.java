@@ -19,19 +19,19 @@ class Shape{
         if(s!=0)   this.side = s;
     }
 
-    public void area(){
-        if(side != 0){
-            System.out.println("Area of your shape as square = "+(side*side));
-            System.out.println("Area of your shape as circle = "+(3.14*side*side));
-        }
-        else if(length!=0 && breadth!=0){
-            System.out.println("Area of your shape as rectangle = "+(length*breadth));
-        }
-        else{
-            double s = (a+b+c)/2;
-            double area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
-            System.out.println("Area of your shape as triangle = "+area);
-        }
+    public void area(double s){
+        System.out.println("Area of your shape as square = "+(side*side));
+        System.out.println("Area of your shape as circle = "+(3.14*side*side));
+    }
+
+    public void area(double l, double b){
+        System.out.println("Area of your shape as rectangle = "+(length*breadth));
+    }
+
+    public void area(double p, double q, double r){
+        double s = (a+b+c)/2;
+        double area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        System.out.println("Area of your shape as triangle = "+area);
     }
 }
 
@@ -50,15 +50,15 @@ class ClassMain{
 
         if(arr[2]!=0){
             Shape sq = new Shape(arr[0], arr[1], arr[2]);
-            sq.area();
+            sq.area(arr[0], arr[1], arr[2]);
         }
         else if(arr[1]!=0){
             Shape sq = new Shape(arr[0], arr[1]);
-            sq.area();
+            sq.area(arr[0], arr[1]);
         }
         else{
             Shape sq = new Shape(arr[0]);
-            sq.area();
+            sq.area(arr[0]);
         }
 
         scan.close();
